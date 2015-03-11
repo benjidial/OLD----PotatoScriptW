@@ -1,0 +1,5 @@
+display This is the "Hello, World!" program.
+wait
+display Hello, World!
+wait
+exit

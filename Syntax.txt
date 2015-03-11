@@ -1,0 +1,17 @@
+alert
+  beeps
+
+clearscreen
+  self explanatory -- *buggy*
+
+display
+  prints text
+
+evaluate
+  WIP: don't use
+
+exit
+  exits program
+
+wait
+  waits for user input
