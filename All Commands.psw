@@ -1,0 +1,10 @@
+beep
+display just beeped
+alert
+log just beeped
+display press enter
+wait
+display press enter twice
+wait
+wait
+exit

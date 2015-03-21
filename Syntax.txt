@@ -1,17 +1,20 @@
 alert
-  beeps
+  beeps and logs to logfile.txt
+
+beep
+  beeps and does not log
 
 clearscreen
   self explanatory -- *buggy*
 
 display
-  prints text
-
-evaluate
-  WIP: don't use
+  prints text to console
 
 exit
   exits program
 
+log
+  logs text to logfile.txt
+
 wait
-  waits for user input
+  waits for user to press enter
