@@ -7,14 +7,29 @@ beep
 clearscreen
   self explanatory -- *buggy*
 
+comment
+  comments out a single line
+
 display
   prints text to console
+
+end comment block
+  ends a comment block
 
 exit
   exits program
 
+input
+  gets input from the user
+
 log
   logs text to logfile.txt
+
+setvar
+  sets a variable
+
+start comment bock
+  starts a comment block
 
 wait
   waits for user to press enter

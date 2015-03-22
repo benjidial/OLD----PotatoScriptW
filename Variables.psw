@@ -1,0 +1,39 @@
+input _str1 Type something, then press enter.
+display You said " _str1 ".
+log Place 1.
+log User said " _str1 ".
+wait
+setvar _str1 abc
+log Place 2.
+log _str1
+log abc _str1 abc
+log abc _space _str1 _space abc
+setvar _str1 a string
+log Place 3.
+log _str1
+log _underscore str1
+log Place 4.
+exit
+comment Those work for display as well as log.
+start comment block
+
+console:
+
+ Type something, then press enter.
+a c test a b_ 2
+ You said "a c test a b_ 2".
+
+logfile.txt:
+
+ Place 1.
+ User said "a c test a b_ 2".
+ Place 2.
+ abc
+ abcabcabc
+ abc abc abc
+ Place 3.
+ abc
+ _str1
+ Place 4.
+ 
+ end comment block

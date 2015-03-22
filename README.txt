@@ -1,4 +1,4 @@
-Version Alpha 0.1.3.2
+Version Alpha 0.2.0.3
 
 Please read the license file.
 If you didn't get one, visit <gnu.org/licenses/old-licenses/gpl-2.0.html>.
@@ -17,6 +17,11 @@ See <github.com/benjidial/PotatoScriptW/wiki> for more.
 Issues? Visit <github.com/benjidial/PotatoScriptW/issues>.
 
 Changelog:
+Alpha 0.2.0.3
+Added limited variable support
+Added user input via console
+Added comment support
+
 Alpha 0.1.3.2
 Added "log" and "beep" Commands
 Added "All Commands.psw" Sample File
