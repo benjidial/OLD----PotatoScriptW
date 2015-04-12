@@ -1,0 +1,27 @@
+comment This simulates an if/else command using _str0.
+input _str1 First text
+input _str2 Second text
+setvar _str0 false
+if _str1 abc
+setvar _str0 true
+display _underscore str1 is abc.
+display _underscore str2 may or may not be ABC.
+end if
+comment This is the start of the "else" section.
+if _str0 false
+start comment block
+Take out this next command if you want if to just be "if/else" and not "if/else if":
+end comment block
+if _str2 ABC
+display _underscore str1 is not abc.
+display _underscore str2 is ABC.
+end if
+start comment block
+This is the end of the "else" section.
+The "if _str0 false" command skips here if _str0 is true.
+The "if _str2 ABC" command skips here as well if _str1 is not ABC.
+Due to "if" commands only skipping to the next "end if" and
+ ignoring nesting, we only need one "end if".
+end comment block
+display Goodbye!
+exit

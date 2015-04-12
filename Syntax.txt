@@ -4,28 +4,31 @@ alert
 beep
   beeps and does not log
 
-clearscreen
-  self explanatory -- *buggy*
-
-comment
+comment <text of comment>
   comments out a single line
 
-display
+display <text to print>
   prints text to console
 
 end comment block
   ends a comment block
 
+end if
+  resumes code execution after a false if statement
+
 exit
   exits program
 
-input
+if <variable> <text to check variable against>
+  checks if a variable is equal to some text afterward, then executes some code if it is
+
+input <variable> <prompt text>
   gets input from the user
 
-log
+log <text to log>
   logs text to logfile.txt
 
-setvar
+setvar <variable> <contents of variable>
   sets a variable
 
 start comment bock
@@ -33,3 +36,7 @@ start comment bock
 
 wait
   waits for user to press enter
+
+
+
+Also see the example files and <github.com/benjidial/PotatoScriptW/wiki/General-Syntax>.

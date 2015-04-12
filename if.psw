@@ -1,0 +1,16 @@
+input _str1 Type either console, file, or exit.
+if _str1 console
+display Hello, world!
+end if
+if _str1 file
+log Hello, world!
+end if
+if _str1 exit
+exit
+end if
+input _str1 Type something.
+input _str2 Type something.
+if _str1 _str2
+display They were the same!
+end if
+exit

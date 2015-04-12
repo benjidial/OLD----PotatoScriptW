@@ -1,10 +1,30 @@
 beep
-display just beeped
+display beep
 alert
-log just beeped
+log alert
 display press enter
 wait
 display press enter twice
 wait
+wait
+input _str1 Type something, then press enter. (Type exit to exit)
+if _str1 exit
+exit
+end if
+display _underscore str1 is _space _str1 .
+log _underscore str1 is _space _str1 .
+setvar _str1 _underscore str1 is _space _str1 .
+display _str1
+log _str1
+comment This is a comment.
+start comment block
+This
+is
+a
+lot
+of
+comments
+end comment block
+display Press enter to close this window.
 wait
 exit

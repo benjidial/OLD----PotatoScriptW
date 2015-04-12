@@ -1,5 +1,5 @@
 /*
-PotatoScriptW Alpha 0.2.0 Reader
+PotatoScriptW Alpha 0.2.1 Reader
 Copyright (C) 2015  Benji Dial
 
 This program is free software; you can redistribute it and/or modify
@@ -55,12 +55,12 @@ int main(int argc, char *argv[]) // Program enters here.
 		outf.flush();
 		if (nArg == nFiles)
 		{
-			cout << "Finished all interpereting jobs!" << endl;
+			cout << "\nFinished all interpereting jobs!" << endl;
 			cout << "Press enter to close this window." << endl;
 		}
 		else
 		{
-			cout << "Finished interpeteting job " << nArg << " of " << nFiles << "." << endl;
+			cout << "\nFinished interpeteting job " << nArg << " of " << nFiles << "." << endl;
 			cout << "Press enter to start next job." << endl;
 		}
 		cin.clear();
@@ -99,7 +99,6 @@ void COOLSTUFF(Type file)
 		strQ = "";
 		cin.clear();
 		inf >> strQ;
-
 		if (strQ == "alert") // logs
 		{
 			cout << static_cast<char>(7); // bell
@@ -166,13 +165,92 @@ void COOLSTUFF(Type file)
 		{
 			inf.ignore();
 			getline(inf, strQ);
-			outf << "\"" << strQ << "\" has not been started." << endl;
+			if (strQ != "if")
+			    outf << "\"" << strQ << "\" has not been started." << endl;
 		}
 		else if (strQ == "exit")
 		{
 			outf << "Hit exit. (This is probably harmless.)" << endl;
 			outf.close();
 			break;
+		}
+		else if (strQ == "if")
+		{
+			inf >> strQ;
+			if (strQ == "_str1")
+				strW = str1;
+			else if (strQ == "_str2")
+				strW = str2;
+			else if (strQ == "_str3")
+				strW = str3;
+			else if (strQ == "_str4")
+				strW = str4;
+			else if (strQ == "_str5")
+				strW = str5;
+			else if (strQ == "_str6")
+				strW = str6;
+			else if (strQ == "_str7")
+				strW = str7;
+			else if (strQ == "_str8")
+				strW = str8;
+			else if (strQ == "_str9")
+				strW = str9;
+			else if (strQ == "_str0")
+				strW = str0;
+			else outf << "Unrecognized variable \"" << strQ << "\"." << endl;
+			inf.ignore();
+			getline(inf, strQ);
+			pswio.str();
+			pswio.str(strQ);
+			bool bPrevDef = false;
+			bool bDef;
+			strE = "";
+			while (pswio)
+			{
+				pswio >> strQ;
+				pswio.ignore();
+				bDef = false;
+				if (strQ == "_str1")
+					strE += str1;
+				else if (strQ == "_str2")
+					strE += str2;
+				else if (strQ == "_str3")
+					strE += str3;
+				else if (strQ == "_str4")
+					strE += str4;
+				else if (strQ == "_str5")
+					strE += str5;
+				else if (strQ == "_str6")
+					strE += str6;
+				else if (strQ == "_str7")
+					strE += str7;
+				else if (strQ == "_str8")
+					strE += str8;
+				else if (strQ == "_str9")
+					strE += str9;
+				else if (strQ == "_str0")
+					strE += str0;
+				else if (strQ == "_space")
+					strE += " ";
+				else if (strQ == "_underscore")
+					strE += "_";
+				else
+				{
+					if (bPrevDef)
+						strE += " ";
+					strE += strQ;
+					bDef = true;
+				}
+				bPrevDef = bDef;
+			}
+			pswio.str();
+			if (strW != strE)
+				while (true)
+				{
+					getline(inf, strQ);
+					if (strQ == "end if")
+						break;
+				}
 		}
 		else if (strQ == "input")
 		{
@@ -225,6 +303,7 @@ void COOLSTUFF(Type file)
 			}
 			pswio.str();
 			cout << endl;
+			cout << " ";
 			getline(cin, strQ);
 			if (strW == "_str1")
 				str1 = strQ;				
@@ -265,6 +344,7 @@ void COOLSTUFF(Type file)
 				pswio.ignore();
 				if (bFirst)
 					outf << " ";
+				bFirst = false;
 				bDef = false;
 				if (strQ == "_str1")
 					outf << str1;					
@@ -309,13 +389,11 @@ void COOLSTUFF(Type file)
 			inf.ignore();
 			inf >> strW;
 			inf.ignore();
-			strQ = " ";   // for security
 			getline(inf, strQ);
 			pswio.str();
 			pswio.str(strQ);
 			bool bPrevDef = false;
 			bool bDef;
-			cout << " ";
 			while (pswio)
 			{
 				pswio >> strQ;
