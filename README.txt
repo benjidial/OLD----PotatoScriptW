@@ -1,4 +1,4 @@
-Version Alpha 0.2.0.3
+Version Alpha 0.2.1.1
 
 Please read the license file.
 If you didn't get one, visit <gnu.org/licenses/old-licenses/gpl-2.0.html>.
@@ -17,14 +17,22 @@ See <github.com/benjidial/PotatoScriptW/wiki> for more.
 Issues? Visit <github.com/benjidial/PotatoScriptW/issues>.
 
 Changelog:
+Alpha 0.2.1.1
+Fixed a small bug with setvar putting a space in front of stuff.
+
+Alpha 0.2.1.0
+Added support for if statements
+Added "if.psw" and "if else.psw" sample files
+Made user input via console preceded by a space
+
 Alpha 0.2.0.3
 Added limited variable support
 Added user input via console
 Added comment support
 
 Alpha 0.1.3.2
-Added "log" and "beep" Commands
-Added "All Commands.psw" Sample File
+Added "log" and "beep" commands
+Added "All Commands.psw" sample file
 
 Alpha 0.1.2.2
 First public version
