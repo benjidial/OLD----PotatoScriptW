@@ -1,5 +1,3 @@
-NOTICE:  THIS IS AN OLD REPOSITORY, KEPT FOR ARCHIVE'S SAKE! GO TO <github.com/benjidial/PotatoScript/> FOR THE CURRENT ONE!
-
 Version Alpha 0.2.1.1
 
 Please read the license file.
